@@ -15,16 +15,15 @@ then
     exit
 else
     mkdir $mod_name
-    cd $mod_name
 fi
 
 echo Copying AssetBundles...
-find ./$mod_dir/Assets/AssetBundles/ -name *.assetbundle -exec cp {} . \;
+find ./$mod_dir/Assets/AssetBundles/ -name *.assetbundle -exec cp {} $mod_name \;
 
 echo AssetBundles Copied.
 
 echo Building C# Scripts...
 
-mcs `find ./$mod_dir/Assets/Scripts/ -name *.cs -print | tr '\n' ' '` -out:$mod_name.dll -target:library -r:$data_dir/Managed/Assembly-CSharp.dll -r:$data_dir/Managed/UnityEngine.dll -r:$data_dir/Managed/UnityEngine.Networking.dll -r:$data_dir/Managed/UnityEngine.CoreModule.dll -r:$data_dir/Managed/UnityEngine.AssetBundleModule.dll
+mcs `find ./$mod_dir/Assets/Scripts/ -name *.cs -print | tr '\n' ' '` -out:$mod_name/$mod_name.dll -target:library -r:$data_dir/Managed/Assembly-CSharp.dll -r:$data_dir/Managed/UnityEngine.dll -r:$data_dir/Managed/UnityEngine.Networking.dll -r:$data_dir/Managed/UnityEngine.CoreModule.dll -r:$data_dir/Managed/UnityEngine.AssetBundleModule.dll -r:$data_dir/Managed/UnityEngine.PhysicsModule.dll -r:$data_dir/Managed/UnityEngine.UI.dll
 
 echo C# Scripts Built!
