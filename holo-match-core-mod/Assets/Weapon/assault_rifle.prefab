@@ -224,9 +224,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607169217332050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93bf5a6d185564344837c666a4bd3f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 61f0778b6552b4db7b910ed90ec7bf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Assault Rifle
+  slot: 0
   ammoType: 2
   type: 5
   fireType: 2
@@ -235,8 +237,8 @@ MonoBehaviour:
   infiniteAmmo: 0
   fireCooldown: 0.1
   reloadTime: 5
-  bulletPrefab: {fileID: 1208532469328258, guid: 0c77ce4d813b74aee8e6cce19fab926d,
-    type: 2}
+  damage: 25
+  bulletPrefab: {fileID: 0}
   bulletSpawn: {fileID: 4056537377843550}
 --- !u!114 &114333439740494514
 MonoBehaviour:

@@ -151,9 +151,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967123485818010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ba9734e92d94571a7b0aa929cd5c55, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c141ba102bb746b5b2b1ae11183c247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Shotgun
+  slot: 0
   ammoType: 4
   type: 3
   fireType: 1
@@ -162,8 +164,8 @@ MonoBehaviour:
   infiniteAmmo: 0
   fireCooldown: 1
   reloadTime: 3
-  bulletPrefab: {fileID: 1026202551577762, guid: 1c45aa953efbc405ba458e476bf767f0,
-    type: 2}
+  damage: 15
+  bulletPrefab: {fileID: 0}
   bulletSpawn: {fileID: 4525666187645838}
 --- !u!114 &114750257976775802
 MonoBehaviour:

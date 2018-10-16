@@ -151,9 +151,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1637930434244014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1c2da373a25e4bc99e03d27749f982b, type: 3}
+  m_Script: {fileID: 11500000, guid: d512cd506720741e89316e2768b5c8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Pistol
+  slot: 1
   ammoType: 1
   type: 2
   fireType: 1
@@ -162,8 +164,8 @@ MonoBehaviour:
   infiniteAmmo: 0
   fireCooldown: 0.1
   reloadTime: 3
-  bulletPrefab: {fileID: 1208532469328258, guid: 0c77ce4d813b74aee8e6cce19fab926d,
-    type: 2}
+  damage: 15
+  bulletPrefab: {fileID: 0}
   bulletSpawn: {fileID: 4583257554334534}
 --- !u!114 &114625044100646600
 MonoBehaviour:
