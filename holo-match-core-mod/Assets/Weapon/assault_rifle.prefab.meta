@@ -1,9 +1,8 @@
 fileFormatVersion: 2
 guid: 376467165131048789d8af708cbf3007
-timeCreated: 1520877247
-licenseType: Free
 NativeFormatImporter:
+  externalObjects: {}
   mainObjectFileID: 100100000
   userData: 
-  assetBundleName: 
+  assetBundleName: core-weapons
   assetBundleVariant: 
