@@ -1,0 +1,14 @@
+.ds_store
+*.swp
+*.Trashes
+Library
+Temp
+*.csproj
+*pidb
+*.unityproj
+*sln
+*.userprefs
+*.app
+bin/*
+*.dll
+holo-match-core-mod/Assets/holo-match-code
