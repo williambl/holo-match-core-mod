@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 
-public class ExampleMod : HoloMod {
+public class CoreMod : HoloMod {
 
-    public string name = "ExampleMod";
+    public string name = "CoreMod";
 
     public string version = "v0.1";
 
     public override void RegisterWeapons(WeaponManager manager) {
+        foreach (AssetBundle assetBundle in assetBundles) {
+            Debug.Log(assetBundle.name);
+        }
     }
 
     public override void RegisterMaps(MapManager manager) {
