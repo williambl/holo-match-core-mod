@@ -13,3 +13,4 @@ bin/*
 *.dll
 holo-match-core-mod/Assets/holo-match-code
 holo-match-core-mod/Assets/AssetBundles/*
+CoreMod/*
