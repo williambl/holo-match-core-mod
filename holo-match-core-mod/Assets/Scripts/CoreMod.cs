@@ -7,8 +7,13 @@ public class CoreMod : HoloMod {
     public string version = "v0.1";
 
     public override void RegisterWeapons(WeaponManager manager) {
-        foreach (AssetBundle assetBundle in assetBundles) {
-            Debug.Log(assetBundle.name);
+        AssetBundle bundle = assetBundles.Find(x => x.name == "core-weapons");
+        string[] names = bundle.GetAllAssetNames();
+        foreach (string name in names) {
+            if (name.EndsWith(".prefab")) {
+                Debug.Log("Adding weapon " + name);
+                manager.AddWeaponToRegistry((GameObject)bundle.LoadAsset(name));
+            }
         }
     }
 
