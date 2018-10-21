@@ -11,4 +11,8 @@ public class ExampleMod : HoloMod {
 
     public override void RegisterMaps(MapManager manager) {
     }
+
+    public override void RegisterProjectiles(ProjectileManager manager) {
+    }
+    
 }
