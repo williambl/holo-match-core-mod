@@ -39,6 +39,7 @@ public class Pistol : Weapon {
 
     new void Start () {
         pc = GetComponent<PlayerController>();
+        bulletPrefab = ProjectileManager.projectileManager.GetProjectileFromRegistry("Bullet");
     }
 
     new void Update () {
