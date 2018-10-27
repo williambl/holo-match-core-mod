@@ -40,6 +40,7 @@ public class Shotgun : Weapon {
     new void Start () {
         pc = GetComponent<PlayerController>();
         bulletPrefab = ProjectileManager.projectileManager.GetProjectileFromRegistry("Shot");
+        bulletSpawn = transform.Find("ShootPoint");
     }
 
     new void Update () {
