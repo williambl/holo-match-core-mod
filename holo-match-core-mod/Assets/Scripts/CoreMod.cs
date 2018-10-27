@@ -26,7 +26,6 @@ public class CoreMod : HoloMod {
         foreach (string name in names) {
             if (name.EndsWith(".prefab")) {
                 Debug.Log("Adding projectile " + name);
-                Debug.Log(manager.name);
                 manager.AddProjectileToRegistry((GameObject)bundle.LoadAsset(name));
             }
         }
