@@ -224,22 +224,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607169217332050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f0778b6552b4db7b910ed90ec7bf68, type: 3}
+  m_Script: {fileID: 11500000, guid: bc30939b2ce5941408038114be6781ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Assault Rifle
-  slot: 0
-  ammoType: 2
-  type: 5
-  fireType: 2
-  ammo: 30
-  maxAmmo: 30
-  infiniteAmmo: 0
-  fireCooldown: 0.1
-  reloadTime: 5
-  damage: 25
-  bulletPrefab: {fileID: 0}
-  bulletSpawn: {fileID: 4056537377843550}
+  componentNames:
+  - AssaultRifle
+  modName: CoreMod
 --- !u!114 &114333439740494514
 MonoBehaviour:
   m_ObjectHideFlags: 1

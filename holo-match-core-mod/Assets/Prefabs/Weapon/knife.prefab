@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4782038448174868}
-  - component: {fileID: 114397695880257362}
+  - component: {fileID: 114960509656757640}
   - component: {fileID: 114343173780025170}
   m_Layer: 0
   m_Name: knife
@@ -146,7 +146,7 @@ MonoBehaviour:
     i15: 233
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &114397695880257362
+--- !u!114 &114960509656757640
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,16 +154,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1324472293988994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f792835a87314f44bb54555940d5281, type: 3}
+  m_Script: {fileID: 11500000, guid: bc30939b2ce5941408038114be6781ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Knife
-  slot: 2
-  ammoType: 0
-  type: 0
-  fireType: 1
-  ammo: 0
-  maxAmmo: 0
-  infiniteAmmo: 1
-  fireCooldown: 0.1
-  reloadTime: 0
+  componentNames:
+  - Knife
+  modName: CoreMod
