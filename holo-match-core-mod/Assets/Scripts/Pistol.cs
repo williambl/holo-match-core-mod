@@ -38,9 +38,12 @@ public class Pistol : Weapon {
     float bulletSpeed = 100;
 
     new void Start () {
-        pc = GetComponent<PlayerController>();
-        bulletPrefab = ProjectileManager.projectileManager.GetProjectileFromRegistry("Bullet");
-        bulletSpawn = transform.Find("ShootPoint");
+        if (gameObject.tag == "Player")
+            pc = GetComponent<PlayerController>();
+        else {
+            bulletPrefab = ProjectileManager.projectileManager.GetProjectileFromRegistry("Bullet");
+            bulletSpawn = transform.Find("ShootPoint");
+        }
     }
 
     new void Update () {
@@ -82,26 +85,35 @@ public class Pistol : Weapon {
 
     [Command]
     public void CmdInstantiateAndAccelerate () {
+        Debug.Log("Somebody");
+        Debug.Log(bulletSpawn.position);
+        Debug.Log("May Have");
         //Create a new bullet GameObject
         GameObject bullet = (GameObject)Object.Instantiate(bulletPrefab, bulletSpawn.position, transform.rotation);
+        Debug.Log("Once");
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
+        Debug.Log("Told");
         bulletComponent.playerFired = pc;
         bulletComponent.damage = damage;
+        Debug.Log("Me");
 
         //Work out the direction to shoot it in
         Ray ray = new Ray(pc.cam.transform.position+pc.cam.transform.forward, pc.cam.transform.forward);
         RaycastHit hit;
         Vector3 direction;
-
+        Debug.Log("The");
         Vector3 aimPoint = Physics.Raycast(ray, out hit, 100) ? hit.point : pc.cam.transform.position+pc.cam.transform.forward*100;
         direction = (aimPoint-bulletSpawn.position).normalized;
 
+        Debug.Log("World");
         bullet.transform.LookAt(direction);
 
         //Give it a push
+        Debug.Log("Was");
         bullet.GetComponent<Rigidbody>().velocity = direction * bulletSpeed;
 
         //Spawn it on the network
+        Debug.Log("Gonna");
         NetworkServer.Spawn(bullet);
     }
 }
