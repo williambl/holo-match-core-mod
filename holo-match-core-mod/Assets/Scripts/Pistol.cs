@@ -37,7 +37,7 @@ public class Pistol : Weapon {
 
     float bulletSpeed = 100;
 
-    new void Start () {
+    void Awake () {
         if (gameObject.tag == "Player")
             pc = GetComponent<PlayerController>();
         else {
@@ -115,5 +115,6 @@ public class Pistol : Weapon {
         //Spawn it on the network
         Debug.Log("Gonna");
         NetworkServer.Spawn(bullet);
+        Debug.Log("Roll Me");
     }
 }
